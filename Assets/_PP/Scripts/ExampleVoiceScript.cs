@@ -6,6 +6,7 @@ using UnityEngine;
 public class ExampleVoiceScript : MonoBehaviour
 {
     [SerializeField] private AppVoiceExperience appVoiceExperience;
+    [SerializeField] private APIIntegration APIIntegration;
     [SerializeField] private TTSSpeaker tTSSpeaker;
     [SerializeField] private GameObject _targetCube;
 
@@ -24,6 +25,7 @@ public class ExampleVoiceScript : MonoBehaviour
         if (!string.IsNullOrEmpty(response["text"]))
         {
             tTSSpeaker.Speak(response["text"]);
+            StartCoroutine(APIIntegration.GenerateImage(response["text"]));
         }
     }
 
