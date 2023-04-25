@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Oculus/Interaction/Samples/Scenes/Examples/GestureExamples.unity
-    guid: 4ee2a082a0e621b49ab01667c66f1599
+    path: Assets/Oculus/Voice/Demo/Scenes/BuiltinDemo.unity
+    guid: 8e367e1dd90bb894d88708e7548eae48
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ab82cc0c76a3e9742aba17893385fb8a,
       type: 2}
