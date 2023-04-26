@@ -2029,7 +2029,7 @@ MonoBehaviour:
   colorMapEditorPosterize: 0
   colorMapEditorSaturation: 0.34
   serializedSurfaceGeometry: []
-  textureOpacity_: 1
+  textureOpacity_: 0.2
   edgeRenderingEnabled_: 0
   edgeColor_: {r: 0, g: 0.48501658, b: 0.6320754, a: 0.8509804}
   colorMapType: 0

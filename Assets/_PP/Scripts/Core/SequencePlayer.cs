@@ -47,7 +47,7 @@ namespace Meta.PP
             
             AppManager.Instance.MoveToNextSequence(true);
             
-            Debug.Log($"[CustomScene] Playing scene {gameObject.name}");
+            Debug.Log($"[CustomScene] Playing scene {AppManager.Instance.currentSceneSequence.name}");
         }
         
         public void GoToNextSequence()
