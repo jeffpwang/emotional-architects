@@ -53,7 +53,7 @@ namespace Meta.PP
             {
                 return;
             }
-
+            
             if (_audioSource.isPlaying)
             {
                 _audioSource.Stop();
