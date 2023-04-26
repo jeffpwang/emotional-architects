@@ -306,7 +306,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3584447571371538870}
   - component: {fileID: 3584447571371538869}
-  - component: {fileID: 3584447571371538868}
   m_Layer: 0
   m_Name: ExampleVoiceScript
   m_TagString: Untagged
@@ -342,21 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   appVoiceExperience: {fileID: 3584447571428947518}
-  APIIntegration: {fileID: 3584447571371538868}
   tTSSpeaker: {fileID: 70249150939137401}
-  _targetCube: {fileID: 0}
---- !u!114 &3584447571371538868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3584447571371538871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a90cec97e709e4bb969febaab55741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3584447571385445651
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3584447571607792896}
+  - component: {fileID: 1305124336}
   m_Layer: 0
   m_Name: VoiceController
   m_TagString: Untagged
@@ -714,6 +700,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1305124336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3584447571607792897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb6194ce665c16468c44e741d949c7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3584447571806364223
 GameObject:
   m_ObjectHideFlags: 0

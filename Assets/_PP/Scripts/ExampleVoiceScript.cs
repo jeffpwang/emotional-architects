@@ -1,3 +1,4 @@
+using Meta.PP;
 using Meta.WitAi.Json;
 using Meta.WitAi.TTS.Utilities;
 using Oculus.Voice;
@@ -7,9 +8,7 @@ using UnityEngine.InputSystem;
 public class ExampleVoiceScript : MonoBehaviour
 {
     [SerializeField] private AppVoiceExperience appVoiceExperience;
-    [SerializeField] private APIIntegration APIIntegration;
     [SerializeField] private TTSSpeaker tTSSpeaker;
-    [SerializeField] private GameObject _targetCube;
 
     private bool _active;
 
@@ -35,15 +34,9 @@ public class ExampleVoiceScript : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(response["text"]))
         {
-            Debug.LogError(response["text"]);
             tTSSpeaker.Speak(response["text"]);
-            StartCoroutine(APIIntegration.GenerateImage(response["text"], _targetCube));
+            Events.Raise(new AudioVisualizerEvent(response["text"]));
         }
-    }
-
-    public void EnableCube(bool enable)
-    {
-        _targetCube.SetActive(enable);
     }
 
     public void SetActivation(bool toActivated)
