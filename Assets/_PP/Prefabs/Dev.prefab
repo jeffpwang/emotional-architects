@@ -188,6 +188,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7762062562022904281}
+  - component: {fileID: 373008430762315630}
+  - component: {fileID: 8811034233691440349}
   m_Layer: 0
   m_Name: Dev
   m_TagString: Untagged
@@ -212,6 +214,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &373008430762315630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2361585970265193516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d3cb301becf384e9a36377478b4439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Calibration
+--- !u!114 &8811034233691440349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2361585970265193516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058b0977aa062fd44a05cc3eebedcc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionDelay: 1
+  OnPlaySequence:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 373008430762315630}
+        m_TargetAssemblyTypeName: GoToNext, Assembly-CSharp
+        m_MethodName: GoToNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnEndSequence:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3018626480868298002
 GameObject:
   m_ObjectHideFlags: 0

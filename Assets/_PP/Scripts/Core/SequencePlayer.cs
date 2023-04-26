@@ -65,5 +65,10 @@ namespace Meta.PP
             AppManager.Instance.MoveToNextSequence(true);
             Debug.Log($"[CustomScene] Playing scene {gameObject.name}");
         }
+        
+        public void GoToNextSequence()
+        {
+            AppManager.Instance.MoveToNextSequence(true);
+        }
     }
 }
