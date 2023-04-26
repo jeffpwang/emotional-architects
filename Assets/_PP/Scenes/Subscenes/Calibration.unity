@@ -387,13 +387,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a09d7b4789b2ad84483a201f9498ba80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneId: calibration
-  autoPlay: 0
-  delayBeforePlay: 0
   sequences:
   - {fileID: 810114001}
   - {fileID: 297942075}
-  - {fileID: 2099279944}
 --- !u!4 &756245109
 Transform:
   m_ObjectHideFlags: 0
@@ -1294,18 +1290,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3540a76d2b9bf448a70b88b802de2c7, type: 3}
---- !u!114 &2099279944 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8811034233691440349, guid: d3540a76d2b9bf448a70b88b802de2c7,
-    type: 3}
-  m_PrefabInstance: {fileID: 2036198713}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058b0977aa062fd44a05cc3eebedcc5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &123190303371844599
 MonoBehaviour:
   m_ObjectHideFlags: 0
