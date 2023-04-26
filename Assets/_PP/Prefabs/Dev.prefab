@@ -239,7 +239,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058b0977aa062fd44a05cc3eebedcc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideChildrenOnStart: 0
   actionDelay: 1
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
   OnPlaySequence:
     m_PersistentCalls:
       m_Calls:
