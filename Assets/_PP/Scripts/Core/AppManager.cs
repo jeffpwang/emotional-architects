@@ -51,11 +51,11 @@ namespace Meta.PP
 
         private void Update()
         {
-            if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger) || Input.GetKeyDown(KeyCode.RightArrow))
+            if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 MoveToNextSequence(true);
             }
-            if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger) || Input.GetKeyDown(KeyCode.LeftArrow))
+            if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 MoveToNextSequence(false);
             }

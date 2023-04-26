@@ -16,7 +16,6 @@ namespace Meta.PP
         public UnityEvent OnPlaySequence;
         public UnityEvent OnEndSequence;
         
-        protected bool _isListening = false;
         protected bool _isWaiting = false; // action delay coroutine
 
         public void Start()
@@ -58,20 +57,17 @@ namespace Meta.PP
 
             TriggerAction();
             
-            Debug.Log($"[CustomSequence: TAKE ACTION {gameObject.name}]");
             _isWaiting = false;
         }
 
         public void TriggerAction()
         {
             OnPlaySequence?.Invoke();
-            Debug.Log($"[CustomSequence] Trigger action...{name}");
+            Debug.Log($"[CustomSequence] PLAY SEQUENCE...{name}");
         }
 
         public void PlaySequence()
         {
-            Debug.Log($"[CustomSequence: PLAY SEQUENCE {gameObject.name}]");
-            
             StartCoroutine(TakeAction());
             
             AppManager.OnStop += EndSequence; // if scene stops prematurely
@@ -79,7 +75,6 @@ namespace Meta.PP
 
         public void EndSequence()
         {
-            // TODO: is this right? 
             StopAllCoroutines();
             
             OnEndSequence?.Invoke();
