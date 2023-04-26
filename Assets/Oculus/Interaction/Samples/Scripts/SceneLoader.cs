@@ -31,7 +31,7 @@ namespace Oculus.Interaction.Samples
         public Action<string> WhenLoadingScene = delegate { };
         public Action<string> WhenSceneLoaded = delegate { };
         private int _waitingCount = 0;
-
+        
         public void Load(string sceneName)
         {
             if (_loading) return;
@@ -61,13 +61,16 @@ namespace Oculus.Interaction.Samples
 
         private IEnumerator LoadSceneAsync(string sceneName)
         {
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             while (!asyncLoad.isDone)
             {
                 yield return null;
             }
-
+            
+            Debug.Log($"[SceneLoader] SCENE {sceneName} LOADED");
+            
             WhenSceneLoaded.Invoke(sceneName);
+            _loading = false;
         }
     }
 }
