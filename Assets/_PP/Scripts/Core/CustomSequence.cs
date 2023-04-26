@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,13 +8,25 @@ namespace Meta.PP
     // parent class for individual sequences that play during a scene
     public class CustomSequence : MonoBehaviour
     {
+        public bool hideChildrenOnStart = true;
         public float actionDelay = 1f;
+        
+        public UnityEvent OnStart;
         
         public UnityEvent OnPlaySequence;
         public UnityEvent OnEndSequence;
         
         protected bool _isListening = false;
         protected bool _isWaiting = false; // action delay coroutine
+
+        public void Start()
+        {
+            if (hideChildrenOnStart)
+            {
+                HideChildren();
+            }
+            OnStart?.Invoke();
+        }
 
         public void ShowChildren()
         {
