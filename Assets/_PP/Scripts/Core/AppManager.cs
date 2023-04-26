@@ -44,34 +44,22 @@ namespace Meta.PP
             }
         }
 
+        private void Start()
+        {
+            SetScene(sceneNames[0]);
+        }
+
         private void Update()
         {
-            if (isPlaying)
+            if (OVRInput.GetDown(OVRInput.RawButton.X) || Input.GetKeyDown(KeyCode.RightArrow))
             {
-                // switch scenes
-                if (Input.GetKeyDown(KeyCode.Space) || OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
-                {
-                    EndScene();
-                }
-                // move sequences
-                if (OVRInput.GetDown(OVRInput.RawButton.X) || Input.GetKeyDown(KeyCode.RightArrow))
-                {
-                    MoveToNextSequence(true);
-                }
-                if (OVRInput.GetDown(OVRInput.RawButton.Y) || Input.GetKeyDown(KeyCode.LeftArrow))
-                {
-                    MoveToNextSequence(false);
-                }
+                MoveToNextSequence(true);
             }
-            else
+            if (OVRInput.GetDown(OVRInput.RawButton.Y) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                if (Input.GetKeyDown(KeyCode.Space)) 
-                {
-                    StartPlaying();
-                }
+                MoveToNextSequence(false);
             }
-            
-            // DEBUG KEYS
+
             if (Input.GetKeyDown(KeyCode.Keypad0)) // set to welcome
             {
                 SetScene(sceneNames[0]);
@@ -84,75 +72,44 @@ namespace Meta.PP
             {
                 SetScene(sceneNames[2]);
             }
-            if (Input.GetKeyDown(KeyCode.Keypad2)) // set to therapy
+            if (Input.GetKeyDown(KeyCode.Keypad3)) // set to therapy
             {
                 SetScene(sceneNames[3]);
             }
-            if (Input.GetKeyDown(KeyCode.Keypad2)) // set to ending
+            if (Input.GetKeyDown(KeyCode.Keypad4)) // set to ending
             {
                 SetScene(sceneNames[4]);
             }
         }
-        private void OnEnable()
-        {
 
-        }
-        private void OnDisable()
-        {
-
-        }
-        
-        public void StartPlaying() // play currently selected scene
-        {
-            if (isPlaying)
-            {
-                return;
-            }
-            
-            if (currentScene == null)
-            {
-                Debug.LogError("[AppManager] Scene not set!");
-                return;
-            }
-            
-            // reset sequence stuff
-            currentSequenceIndex = -1;
-            currentScene = null;
-            
-            isPlaying = true;
-
-            // setup scene
-            OnPlay?.Invoke();
-            
-            Debug.Log($"[AppManager] Now playing: {currentScene}");
-        }
-        
         public void EndScene()
         {
-            if (isPlaying)
-            {
-                isPlaying = false;
-                
-                OnStop?.Invoke();
+            OnStop?.Invoke();
 
-                Debug.Log($"[AppManager] Stopped playing: {currentScene}");
-            }
+            Debug.Log($"[AppManager] END SCENE: {currentScene}");
         }
         
         public void SetScene(string newSceneId)
         {
+            if (currentScene != null)
+            {
+                EndScene();
+            }
+            
             foreach (var scene in sceneNames)
             {
                 if (scene == newSceneId)
                 {
                     currentScene = scene;
-
+                    currentSequenceIndex = -1;
+                    
                     sceneLoader.Load(newSceneId);
                     
                     sceneLoader.WhenSceneLoaded += delegate(string s)
                     {
                         currentSequencePlayer = FindObjectOfType<SequencePlayer>();
-                        currentSequencePlayer.SetupScene();
+
+                        currentSequencePlayer.PlayScene();
                     };
                     
                     Debug.Log($"[AppManager] Set current scene to: {currentScene}");
@@ -196,7 +153,6 @@ namespace Meta.PP
             // play sequence
             currentSceneSequence = currentSequencePlayer.sequences[currentSequenceIndex];
             currentSceneSequence.PlaySequence();
-            
         }
     }
 }

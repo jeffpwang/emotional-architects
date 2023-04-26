@@ -1394,7 +1394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: welcome
-  autoPlay: 1
+  autoPlay: 0
   delayBeforePlay: 1
   sequences:
   - {fileID: 1164892043}

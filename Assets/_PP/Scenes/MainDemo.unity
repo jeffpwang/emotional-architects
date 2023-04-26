@@ -2029,7 +2029,7 @@ MonoBehaviour:
   colorMapEditorPosterize: 0
   colorMapEditorSaturation: 0.34
   serializedSurfaceGeometry: []
-  textureOpacity_: 0.554
+  textureOpacity_: 1
   edgeRenderingEnabled_: 0
   edgeColor_: {r: 0, g: 0.48501658, b: 0.6320754, a: 0.8509804}
   colorMapType: 0
@@ -2276,6 +2276,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AuraFirstPerson
       objectReference: {fileID: 0}
+    - target: {fileID: 3996650893256479917, guid: b7deeec84cfb5464f8178d08a689fcf0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4313630502284581082, guid: b7deeec84cfb5464f8178d08a689fcf0,
         type: 3}
       propertyPath: m_RootOrder
@@ -2335,6 +2340,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303678808251098910, guid: b7deeec84cfb5464f8178d08a689fcf0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7deeec84cfb5464f8178d08a689fcf0, type: 3}
@@ -6539,6 +6549,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6084076445833245609, guid: e1675d665058fc54fb4344d89919ffa5,
+        type: 3}
+      propertyPath: requestEyeTrackingPermissionOnStartup
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084076445833245609, guid: e1675d665058fc54fb4344d89919ffa5,
+        type: 3}
+      propertyPath: requestBodyTrackingPermissionOnStartup
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084076445833245609, guid: e1675d665058fc54fb4344d89919ffa5,
+        type: 3}
+      propertyPath: requestFaceTrackingPermissionOnStartup
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6084076445838398897, guid: e1675d665058fc54fb4344d89919ffa5,
         type: 3}
       propertyPath: m_CullingMask.m_Bits

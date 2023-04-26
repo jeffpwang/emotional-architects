@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: calibration
-  autoPlay: 1
+  autoPlay: 0
   delayBeforePlay: 1
   sequences:
   - {fileID: 297942075}
