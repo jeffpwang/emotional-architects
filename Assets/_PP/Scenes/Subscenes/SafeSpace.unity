@@ -152,7 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058b0977aa062fd44a05cc3eebedcc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideChildrenOnStart: 1
   actionDelay: 1
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
   OnPlaySequence:
     m_PersistentCalls:
       m_Calls:
@@ -197,7 +201,7 @@ Transform:
   m_Children:
   - {fileID: 612747300}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &568202338
 GameObject:
@@ -631,7 +635,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058b0977aa062fd44a05cc3eebedcc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideChildrenOnStart: 1
   actionDelay: 1
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
   OnPlaySequence:
     m_PersistentCalls:
       m_Calls:
@@ -707,7 +715,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 058b0977aa062fd44a05cc3eebedcc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideChildrenOnStart: 1
   actionDelay: 1
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
   OnPlaySequence:
     m_PersistentCalls:
       m_Calls:
@@ -752,7 +764,7 @@ Transform:
   m_Children:
   - {fileID: 616634992}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1717118012
 GameObject:
@@ -784,7 +796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: safespace
-  autoPlay: 0
+  autoPlay: 1
   delayBeforePlay: 1
   sequences:
   - {fileID: 280694983}

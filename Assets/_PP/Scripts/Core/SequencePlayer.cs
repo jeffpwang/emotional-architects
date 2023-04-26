@@ -23,12 +23,6 @@ namespace Meta.PP
 
         public void PlayScene()
         {
-            // activate all sequences
-            foreach (CustomSequence sequence in sequences)
-            {
-                sequence.HideChildren();
-            }
-            
             // play scene automatically
             if (autoPlay)
             {
