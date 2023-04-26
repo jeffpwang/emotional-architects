@@ -5,28 +5,66 @@ namespace Meta.PP
 {
     public class CubeAnimationController : MonoBehaviour
     {
-        [SerializeField] private GameObject _therapistCube;
-        [SerializeField] private GameObject _patientCube;
-        [SerializeField] private GameObject _combinedCube;
+        [SerializeField] private Animator _merge;
+        [SerializeField] private Animator _start;
+        [SerializeField] private Animator _therapy;
+        [SerializeField] private Animator _split;
+        [SerializeField] private GazeController _gazeController;
 
-        private void EnableCube(GameObject target, bool enable)
+        private void Awake()
         {
-            target.SetActive(enable);
+            StartCoroutine(AnimationSequence());
         }
 
-        public void EnableTherapistCube(bool enable)
+        private IEnumerator AnimationSequence()
         {
-            EnableCube(_therapistCube, enable);
+            EnableMergeCube(true);
+            yield return new WaitForSeconds(GetAnimationLenght(_merge));
+
+            EnableMergeCube(false);
+            EnableStartCube(true);
+            yield return new WaitForSeconds(GetAnimationLenght(_start));
+
+            _gazeController.IsActive = true;
+            EnableStartCube(false);
+            EnableTherapyCube(true);
+            yield return new WaitForSeconds(GetAnimationLenght(_therapy) * 2);
+
+            _gazeController.IsActive = false;
+            EnableTherapyCube(false);
+            EnableSplitCube(true);
+            yield return new WaitForSeconds(GetAnimationLenght(_split));
+            EnableSplitCube(false);
         }
 
-        public void EnablePatientCube(bool enable)
+        private void EnableCube(Animator target, bool enable)
         {
-            EnableCube(_patientCube, enable);
+            target.gameObject.SetActive(enable);
         }
 
-        public void EnableCombinedCube(bool enable)
+        private void EnableStartCube(bool enable)
         {
-            EnableCube(_combinedCube, enable);
+            EnableCube(_start, enable);
+        }
+
+        private void EnableMergeCube(bool enable)
+        {
+            EnableCube(_merge, enable);
+        }
+
+        private void EnableTherapyCube(bool enable)
+        {
+            EnableCube(_therapy, enable);
+        }
+
+        private void EnableSplitCube(bool enable)
+        {
+            EnableCube(_split, enable);
+        }
+
+        private float GetAnimationLenght(Animator animator)
+        {
+            return animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
         }
     }
 }
