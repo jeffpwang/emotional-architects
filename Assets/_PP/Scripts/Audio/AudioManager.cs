@@ -30,6 +30,7 @@ namespace Meta.PP
 
         private void PlayAudio(AudioEvent audioEvent)
         {
+            Debug.Log("PlayAudio");
             if (_audioSource.isPlaying)
             {
                 _audioSource.Stop();
