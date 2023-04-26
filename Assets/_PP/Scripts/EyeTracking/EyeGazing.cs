@@ -10,16 +10,17 @@ namespace Meta.PP
         private RaycastHit _currentRaycastHit;
         private RaycastHit _previousRaycastHit;
 
+        public bool IsLooking { get; private set; }
+        public bool IsMovingTooFast { get; private set; }
+
         private void Update()
         {
             Vector3 fwd = _eyeTransform.transform.TransformDirection(Vector3.forward);
-            if (Physics.Raycast(_eyeTransform.transform.position, fwd, out _currentRaycastHit, 50))
+
+            IsLooking = Physics.Raycast(_eyeTransform.transform.position, fwd, out _currentRaycastHit, 50);
+            if (IsLooking)
             {
-                // Debug.LogError(_currentRaycastHit.transform.name);
-                if ((_currentRaycastHit.point - _previousRaycastHit.point).magnitude > _speed)
-                {
-                    // Debug.LogError("Too fast");
-                }
+                IsMovingTooFast = (_currentRaycastHit.point - _previousRaycastHit.point).magnitude > _speed;
                 _previousRaycastHit = _currentRaycastHit;
             }
         }
