@@ -2,13 +2,22 @@ using Meta.PP;
 using Meta.WitAi.Json;
 using Meta.WitAi.TTS.Utilities;
 using Oculus.Voice;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ExampleVoiceScript : MonoBehaviour
+public class VoiceController : MonoBehaviour
 {
+    [Serializable]
+    public enum VoiceControllerState
+    {
+        AICommunication = 0,
+        TextToSpeech = 1,
+    }
+
     [SerializeField] private AppVoiceExperience appVoiceExperience;
     [SerializeField] private TTSSpeaker tTSSpeaker;
+    [SerializeField] private VoiceControllerState _voiceControllerState;
 
     private bool _active;
 
@@ -34,8 +43,15 @@ public class ExampleVoiceScript : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(response["text"]))
         {
-            tTSSpeaker.Speak(response["text"]);
-            Events.Raise(new AudioVisualizerEvent(response["text"]));
+            switch (_voiceControllerState)
+            {
+                case VoiceControllerState.AICommunication:
+                    Events.Raise(new AudioVisualizerEvent(response["text"]));
+                    break;
+                case VoiceControllerState.TextToSpeech:
+                    tTSSpeaker.Speak(response["text"]);
+                    break;
+            }
         }
     }
 
@@ -53,5 +69,11 @@ public class ExampleVoiceScript : MonoBehaviour
                 appVoiceExperience.Deactivate();
             }
         }
+    }
+
+
+    public void SetVoiceControllerState(VoiceControllerState voiceControllerState)
+    {
+        _voiceControllerState = voiceControllerState;
     }
 }
