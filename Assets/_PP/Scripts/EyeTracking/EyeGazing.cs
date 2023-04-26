@@ -17,11 +17,18 @@ namespace Meta.PP
         {
             Vector3 fwd = _eyeTransform.transform.TransformDirection(Vector3.forward);
 
-            IsLooking = Physics.Raycast(_eyeTransform.transform.position, fwd, out _currentRaycastHit, 50);
-            if (IsLooking)
+            Physics.Raycast(_eyeTransform.transform.position, fwd, out _currentRaycastHit, 50);
+
+            if (_currentRaycastHit.transform.gameObject.CompareTag("TargetOrb"))
             {
+                IsLooking = true;
                 IsMovingTooFast = (_currentRaycastHit.point - _previousRaycastHit.point).magnitude > _speed;
                 _previousRaycastHit = _currentRaycastHit;
+            }
+            else
+            {
+                IsLooking = false;
+                IsMovingTooFast = false;
             }
         }
     }
