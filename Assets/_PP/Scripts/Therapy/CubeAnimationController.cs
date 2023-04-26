@@ -20,21 +20,21 @@ namespace Meta.PP
         private IEnumerator AnimationSequence()
         {
             EnableMergeCube(true);
-            yield return new WaitForSeconds(GetAnimationLenght(_merge));
+            yield return new WaitForSeconds(GetAnimationLenght(_merge) - 0.05f);
 
             EnableMergeCube(false);
             EnableStartCube(true);
-            yield return new WaitForSeconds(GetAnimationLenght(_start));
+            yield return new WaitForSeconds(GetAnimationLenght(_start) - 0.05f);
 
             _gazeController.IsActive = true;
             EnableStartCube(false);
             EnableTherapyCube(true);
-            yield return new WaitForSeconds(GetAnimationLenght(_therapy) * _therapyLoop);
+            yield return new WaitForSeconds((GetAnimationLenght(_therapy) * _therapyLoop) - 0.05f);
 
             _gazeController.IsActive = false;
             EnableTherapyCube(false);
             EnableSplitCube(true);
-            yield return new WaitForSeconds(GetAnimationLenght(_split));
+            yield return new WaitForSeconds(GetAnimationLenght(_split) - 0.05f);
             EnableSplitCube(false);
         }
 

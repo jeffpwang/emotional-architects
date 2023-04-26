@@ -1029,6 +1029,7 @@ MonoBehaviour:
   _therapy: {fileID: 1695892286}
   _split: {fileID: 2069472698}
   _gazeController: {fileID: 623790702}
+  _therapyLoop: 10
 --- !u!1001 &924863518
 PrefabInstance:
   m_ObjectHideFlags: 0
