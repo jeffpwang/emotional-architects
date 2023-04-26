@@ -21,7 +21,7 @@ namespace DeltaReality.Utils
 Then enable event categories in the menu, DeltaReality->Events->Event Categories
 */
 
-namespace DeltaReality.Utils
+namespace Meta.PP
 {
     public partial class Events : MonoBehaviour
     {

@@ -1,4 +1,4 @@
-﻿namespace DeltaReality.Utils
+﻿namespace Meta.PP
 {
     /// <summary>
     /// Class that has to be extended when creating new event.

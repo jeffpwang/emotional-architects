@@ -21,7 +21,7 @@ namespace DeltaReality.Utils
 Then enable simple events in the menu, DeltaReality->Events->Simple Events
 */
 
-namespace DeltaReality.Utils
+namespace Meta.PP
 {
     public partial class Events : MonoBehaviour
     {

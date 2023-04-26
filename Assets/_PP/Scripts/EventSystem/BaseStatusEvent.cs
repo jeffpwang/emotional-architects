@@ -1,4 +1,4 @@
-﻿namespace DeltaReality.Utils
+﻿namespace Meta.PP
 {
     /// <summary>
     /// Base class used for events when only simple status is needed

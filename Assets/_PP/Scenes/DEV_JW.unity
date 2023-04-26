@@ -3252,7 +3252,6 @@ MonoBehaviour:
   root: {fileID: 0}
   sceneId: welcome
   autoPlay: 0
-  hideBrainOnPlay: 0
   delayBeforePlay: 3
   sequences: []
   startPosition: {fileID: 0}
