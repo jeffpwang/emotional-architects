@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.meta.movement": {
+      "version": "https://github.com/oculus-samples/Unity-Movement.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.6"
+      },
+      "hash": "ddc05a2e003a014d95ff82825104e97ab0d2a11b"
+    },
     "com.unity.burst": {
       "version": "1.8.2",
       "depth": 1,
