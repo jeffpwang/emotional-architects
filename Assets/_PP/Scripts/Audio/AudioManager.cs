@@ -16,6 +16,8 @@ namespace Meta.PP
         [SerializeField] private AudioDictionary[] _audioDictionary;
         [SerializeField] private AudioSource _audioSource;
 
+        public bool IsPlaying() { return _audioSource.isPlaying; }
+
         private void OnEnable()
         {
             Events.AddListener<AudioEvent>(PlayAudio);
