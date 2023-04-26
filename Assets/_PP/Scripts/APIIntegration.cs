@@ -25,7 +25,7 @@ public class APIIntegration : MonoBehaviour
     private string stableDiffusionApiKey = "tAfSlw05pS52QWvw8KcnnSRwSJamxWdhuKXT5g39BrhINiQqMk7FgpPc1CO0";
     private string stableDiffusionEndpoint = "https://stablediffusionapi.com/api/v3/text2img";
 
-    public IEnumerator GenerateImage(string prompt)
+    public IEnumerator GenerateImage(string prompt, GameObject sphere)
     {
         // Create an instance of ImageGenerationParameters and set its values
         ImageGenerationParameters parameters = new ImageGenerationParameters();
@@ -75,11 +75,11 @@ public class APIIntegration : MonoBehaviour
             // Get the URL and time estimate from the response
             string responseText = request.downloadHandler.text;
             Debug.Log(responseText);
-            StartCoroutine(ProcessJsonResponse(responseText));
+            StartCoroutine(ProcessJsonResponse(responseText, sphere));
         }
     }
 
-    IEnumerator ProcessJsonResponse(string json)
+    IEnumerator ProcessJsonResponse(string json, GameObject sphere)
     {
         // Parse JSON response
         var parsedJson = JsonUtility.FromJson<JsonResponse>(json);
@@ -94,10 +94,10 @@ public class APIIntegration : MonoBehaviour
 
         string imageUrl = parsedJson.output[0];
         // Download the image and apply it as a texture
-        StartCoroutine(DownloadAndSetTexture(imageUrl));
+        StartCoroutine(DownloadAndSetTexture(imageUrl, sphere));
     }
 
-    IEnumerator DownloadAndSetTexture(string url)
+    IEnumerator DownloadAndSetTexture(string url, GameObject sphere)
     {
         using (UnityWebRequest www = UnityWebRequestTexture.GetTexture(url))
         {
@@ -113,7 +113,6 @@ public class APIIntegration : MonoBehaviour
                 Texture2D texture = ((DownloadHandlerTexture)www.downloadHandler).texture;
 
                 // Find the sphere called "360Env" and set the texture
-                GameObject sphere = GameObject.Find("360Env");
                 if (sphere != null)
                 {
                     Renderer renderer = sphere.GetComponent<Renderer>();

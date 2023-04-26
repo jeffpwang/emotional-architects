@@ -124,152 +124,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &24320760
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 24320761}
-  - component: {fileID: 24320762}
-  m_Layer: 0
-  m_Name: Pause Timer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &24320761
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24320760}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1367132210}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &24320762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24320760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d3ff93ff48bd40ab5bca3cf4e6d2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Voice: {fileID: 737401905}
-  ValidateEarly: 0
-  intent: wit$pause_timer
-  confidenceThreshold: 0.6
-  onIntentTriggered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217985791}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: PauseTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  allowConfidenceOverlap: 0
-  confidenceRanges: []
---- !u!1001 &128605289
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3550832292187419420, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3550832292187419420, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3550832292187419420, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3550832292187419420, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3550832292187419420, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3550832292187419420, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3550832292187419420, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3550832292187419420, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3550832292187419420, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3550832292187419420, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3550832292187419420, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3550832292187419422, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-        type: 3}
-      propertyPath: m_Name
-      value: TTSSpeaker
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50, type: 3}
---- !u!114 &128605290 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3550832292187419423, guid: 45fe3f4c7b67f4d4c83f7c1d3c8f1a50,
-    type: 3}
-  m_PrefabInstance: {fileID: 128605289}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b15403450229c3a4b8455a61d6143a6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &146918373
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,71 +235,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!1 &294821956
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 294821957}
-  - component: {fileID: 294821958}
-  m_Layer: 0
-  m_Name: Get Timer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &294821957
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294821956}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1367132210}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &294821958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294821956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d3ff93ff48bd40ab5bca3cf4e6d2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Voice: {fileID: 737401905}
-  ValidateEarly: 0
-  intent: wit$create_timer
-  confidenceThreshold: 0.9
-  onIntentTriggered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217985791}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: GetTimerIntent
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  allowConfidenceOverlap: 0
-  confidenceRanges: []
 --- !u!1 &370090000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8853415547494044118, guid: 0381539164984dc4ca193f001869c526,
@@ -472,89 +261,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!1 &456101853
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 456101854}
-  - component: {fileID: 456101855}
-  m_Layer: 0
-  m_Name: Subtract Time from Timer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &456101854
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456101853}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1367132210}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &456101855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456101853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591c3d6f017c11b4faa41506d75635b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Voice: {fileID: 737401905}
-  ValidateEarly: 0
-  intent: wit$subtract_time_timer
-  confidenceThreshold: 0.6
-  valueMatchers:
-  - path: entities.wit$duration:duration[0].value
-    witValueReference: {fileID: 0}
-    contentRequired: 1
-    matchMethod: 0
-    comparisonMethod: 0
-    matchValue: 
-    floatingPointComparisonTolerance: 0.00009999999747378752
-    allowConfidenceOverlap: 0
-    confidenceRanges: []
-  - path: entities.wit$duration:duration[0].unit
-    witValueReference: {fileID: 0}
-    contentRequired: 1
-    matchMethod: 0
-    comparisonMethod: 0
-    matchValue: 
-    floatingPointComparisonTolerance: 0.00009999999747378752
-    allowConfidenceOverlap: 0
-    confidenceRanges: []
-  formattedValueEvents: []
-  onMultiValueEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217985791}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SubtractTimeTimer
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &479022271
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,329 +486,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623071949}
   m_CullTransparentMesh: 0
---- !u!1 &628551227
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 628551228}
-  - component: {fileID: 628551229}
-  m_Layer: 0
-  m_Name: Resume Timer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &628551228
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628551227}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1367132210}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &628551229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628551227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d3ff93ff48bd40ab5bca3cf4e6d2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Voice: {fileID: 737401905}
-  ValidateEarly: 0
-  intent: wit$resume_timer
-  confidenceThreshold: 0.6
-  onIntentTriggered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217985791}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: ResumeTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  allowConfidenceOverlap: 0
-  confidenceRanges: []
---- !u!1 &680232732
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 680232733}
-  - component: {fileID: 680232734}
-  m_Layer: 0
-  m_Name: Create Timer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &680232733
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 680232732}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1367132210}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &680232734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 680232732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591c3d6f017c11b4faa41506d75635b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Voice: {fileID: 737401905}
-  ValidateEarly: 0
-  intent: wit$create_timer
-  confidenceThreshold: 0.6
-  valueMatchers:
-  - path: entities.wit$duration:duration[0].value
-    witValueReference: {fileID: 0}
-    contentRequired: 1
-    matchMethod: 0
-    comparisonMethod: 0
-    matchValue: 
-    floatingPointComparisonTolerance: 0.00009999999747378752
-    allowConfidenceOverlap: 0
-    confidenceRanges: []
-  - path: entities.wit$duration:duration[0].unit
-    witValueReference: {fileID: 0}
-    contentRequired: 0
-    matchMethod: 0
-    comparisonMethod: 0
-    matchValue: 
-    floatingPointComparisonTolerance: 0.00009999999747378752
-    allowConfidenceOverlap: 0
-    confidenceRanges: []
-  formattedValueEvents: []
-  onMultiValueEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217985791}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: CreateTimer
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!1 &737401904
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 737401906}
-  - component: {fileID: 737401905}
-  m_Layer: 0
-  m_Name: App Voice Experience
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &737401905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737401904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28779cfed47441a42a6cd4fb49c8dc89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  events:
-    _overriddenCallbacks: []
-    OnResponse:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1764557023}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Activate
-            m_BoolArgument: 0
-          m_CallState: 2
-    OnPartialResponse:
-      m_PersistentCalls:
-        m_Calls: []
-    OnValidatePartialResponse:
-      m_PersistentCalls:
-        m_Calls: []
-    OnError:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1764557023}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Activate
-            m_BoolArgument: 0
-          m_CallState: 2
-    OnAborting:
-      m_PersistentCalls:
-        m_Calls: []
-    OnAborted:
-      m_PersistentCalls:
-        m_Calls: []
-    OnRequestCompleted:
-      m_PersistentCalls:
-        m_Calls: []
-    OnMicLevelChanged:
-      m_PersistentCalls:
-        m_Calls: []
-    OnRequestOptionSetup:
-      m_PersistentCalls:
-        m_Calls: []
-    OnRequestCreated:
-      m_PersistentCalls:
-        m_Calls: []
-    OnStartListening:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1764557023}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Deactivate
-            m_BoolArgument: 0
-          m_CallState: 2
-    OnStoppedListening:
-      m_PersistentCalls:
-        m_Calls: []
-    OnStoppedListeningDueToInactivity:
-      m_PersistentCalls:
-        m_Calls: []
-    OnStoppedListeningDueToTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-    OnStoppedListeningDueToDeactivation:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1764557023}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: set_text
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Activate
-            m_BoolArgument: 0
-          m_CallState: 2
-    OnMicDataSent:
-      m_PersistentCalls:
-        m_Calls: []
-    OnMinimumWakeThresholdHit:
-      m_PersistentCalls:
-        m_Calls: []
-    onPartialTranscription:
-      m_PersistentCalls:
-        m_Calls: []
-    onFullTranscription:
-      m_PersistentCalls:
-        m_Calls: []
-    OnByteDataReady:
-      m_PersistentCalls:
-        m_Calls: []
-    OnByteDataSent:
-      m_PersistentCalls:
-        m_Calls: []
-  witRuntimeConfiguration:
-    witConfiguration: {fileID: 11400000, guid: aefff3a06a575d84ba1693ab01e0258f, type: 2}
-    minKeepAliveVolume: 0.0005
-    minKeepAliveTimeInSeconds: 2
-    minTranscriptionKeepAliveTimeInSeconds: 1
-    maxRecordingTime: 20
-    soundWakeThreshold: 0.0005
-    sampleLengthInMs: 10
-    micBufferLengthInSeconds: 1
-    maxConcurrentRequests: 5
-    sendAudioToWit: 1
-    customTranscriptionProvider: {fileID: 0}
-    alwaysRecord: 0
-    preferredActivationOffset: -0.5
-  usePlatformServices: 0
-  enableConsoleLogging: 0
---- !u!4 &737401906
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737401904}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1367132210}
-  - {fileID: 1542268274}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &842905514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1362,150 +745,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 700, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &929551288
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 929551289}
-  - component: {fileID: 929551290}
-  - component: {fileID: 929551291}
-  m_Layer: 0
-  m_Name: ExampleVoiceScript
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &929551289
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929551288}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &929551290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929551288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563db89edb4ad0348bccf8d74555c1bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  appVoiceExperience: {fileID: 737401905}
-  APIIntegration: {fileID: 929551291}
-  tTSSpeaker: {fileID: 128605290}
-  _targetCube: {fileID: 1516978589}
---- !u!114 &929551291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929551288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a90cec97e709e4bb969febaab55741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &939086986
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 939086987}
-  - component: {fileID: 939086988}
-  m_Layer: 0
-  m_Name: Add Time to Timer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &939086987
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939086986}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1367132210}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &939086988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939086986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591c3d6f017c11b4faa41506d75635b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Voice: {fileID: 737401905}
-  ValidateEarly: 0
-  intent: wit$add_time_timer
-  confidenceThreshold: 0.6
-  valueMatchers:
-  - path: entities.wit$duration:duration[0].value
-    witValueReference: {fileID: 0}
-    contentRequired: 1
-    matchMethod: 0
-    comparisonMethod: 0
-    matchValue: 
-    floatingPointComparisonTolerance: 0.00009999999747378752
-    allowConfidenceOverlap: 0
-    confidenceRanges: []
-  - path: entities.wit$duration:duration[0].unit
-    witValueReference: {fileID: 0}
-    contentRequired: 0
-    matchMethod: 0
-    comparisonMethod: 0
-    matchValue: 
-    floatingPointComparisonTolerance: 0.00009999999747378752
-    allowConfidenceOverlap: 0
-    confidenceRanges: []
-  formattedValueEvents: []
-  onMultiValueEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217985791}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: AddTimeToTimer
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1036777633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,227 +1080,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 217985791}
---- !u!1001 &1302877643
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4852061571279439017, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: m_Name
-      value: TTSWit
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852061571279439020, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852061571279439020, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852061571279439020, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852061571279439020, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852061571279439020, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852061571279439020, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852061571279439020, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852061571279439020, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852061571279439020, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852061571279439020, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852061571279439020, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852061571279439023, guid: a89561c2ba096ad4dbf37bbb423d6f3c,
-        type: 3}
-      propertyPath: RequestSettings.configuration
-      value: 
-      objectReference: {fileID: 11400000, guid: aefff3a06a575d84ba1693ab01e0258f,
-        type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a89561c2ba096ad4dbf37bbb423d6f3c, type: 3}
---- !u!1 &1367132208
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1367132210}
-  - component: {fileID: 1367132211}
-  m_Layer: 0
-  m_Name: Response Handlers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1367132210
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367132208}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 680232733}
-  - {fileID: 1466203573}
-  - {fileID: 24320761}
-  - {fileID: 628551228}
-  - {fileID: 939086987}
-  - {fileID: 456101854}
-  - {fileID: 294821957}
-  m_Father: {fileID: 737401906}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1367132211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367132208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 591c3d6f017c11b4faa41506d75635b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Voice: {fileID: 737401905}
-  ValidateEarly: 0
-  intent: change_color
-  confidenceThreshold: 0.9
-  valueMatchers:
-  - path: entities.color:color[0].value
-    witValueReference: {fileID: 0}
-    contentRequired: 1
-    matchMethod: 0
-    comparisonMethod: 0
-    matchValue: 
-    floatingPointComparisonTolerance: 0.00009999999747378752
-    allowConfidenceOverlap: 0
-    confidenceRanges: []
-  formattedValueEvents: []
-  onMultiValueEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 929551290}
-        m_TargetAssemblyTypeName: ExampleVoiceScript, Assembly-CSharp
-        m_MethodName: EnableCube
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!1 &1466203572
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1466203573}
-  - component: {fileID: 1466203574}
-  m_Layer: 0
-  m_Name: Delete Timer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1466203573
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1466203572}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1367132210}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1466203574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1466203572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d3ff93ff48bd40ab5bca3cf4e6d2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Voice: {fileID: 737401905}
-  ValidateEarly: 0
-  intent: wit$delete_timer
-  confidenceThreshold: 0.6
-  onIntentTriggered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 217985791}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: DeleteTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  allowConfidenceOverlap: 0
-  confidenceRanges: []
 --- !u!1 &1516978589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,7 +1175,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1520245540
 GameObject:
@@ -2293,98 +1311,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520245540}
   m_CullTransparentMesh: 0
---- !u!1 &1542268272
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1542268274}
-  - component: {fileID: 1542268273}
-  - component: {fileID: 1542268275}
-  m_Layer: 0
-  m_Name: Interaction Handler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1542268273
+--- !u!114 &1542268273 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3584447571698274174, guid: a5eef99b8150d574c8fcf2425c678de3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3584447570991868431}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542268272}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abf7a75ccc7b2ef43bde5b4c73de6e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freshStateText: Press the Activate button and say "Set a timer for 30 seconds"
-  textArea: {fileID: 1174599226}
-  showJson: 0
-  appVoiceExperience: {fileID: 737401905}
---- !u!4 &1542268274
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542268272}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 737401906}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1542268275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542268272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a99c674c87ff4d45b8e09b8dab3e94f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _keys: 200000004a0100004c010000
-  OnButtonDown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1542268273}
-        m_TargetAssemblyTypeName: Oculus.Voice.Demo.InteractionHandler, Oculus.Voice.Demo
-        m_MethodName: SetActivation
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  OnButtonUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1542268273}
-        m_TargetAssemblyTypeName: Oculus.Voice.Demo.InteractionHandler, Oculus.Voice.Demo
-        m_MethodName: SetActivation
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1744916049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,3 +1746,137 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1001 &3584447570991868431
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3584447570637022672, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: onMultiValueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 217985791}
+    - target: {fileID: 3584447570730666569, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: onIntentTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 217985791}
+    - target: {fileID: 3584447571001110773, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: onIntentTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 217985791}
+    - target: {fileID: 3584447571361414787, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: onMultiValueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 217985791}
+    - target: {fileID: 3584447571371538869, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: _targetCube
+      value: 
+      objectReference: {fileID: 1516978589}
+    - target: {fileID: 3584447571385445649, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: onMultiValueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 217985791}
+    - target: {fileID: 3584447571428947518, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: events.OnError.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1764557023}
+    - target: {fileID: 3584447571428947518, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: events.OnResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1764557023}
+    - target: {fileID: 3584447571428947518, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: events.OnStartListening.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1764557023}
+    - target: {fileID: 3584447571428947518, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: events.OnStoppedListeningDueToDeactivation.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1764557023}
+    - target: {fileID: 3584447571605423154, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: onIntentTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 217985791}
+    - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571607792897, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: m_Name
+      value: VoiceController
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571698274174, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: textArea
+      value: 
+      objectReference: {fileID: 1174599226}
+    - target: {fileID: 3584447571908564921, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: onIntentTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 217985791}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5eef99b8150d574c8fcf2425c678de3, type: 3}
