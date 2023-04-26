@@ -10,6 +10,7 @@ namespace Meta.PP
         [SerializeField] private Animator _therapy;
         [SerializeField] private Animator _split;
         [SerializeField] private GazeController _gazeController;
+        [SerializeField] private float _therapyLoop;
 
         private void Awake()
         {
@@ -28,7 +29,7 @@ namespace Meta.PP
             _gazeController.IsActive = true;
             EnableStartCube(false);
             EnableTherapyCube(true);
-            yield return new WaitForSeconds(GetAnimationLenght(_therapy) * 2);
+            yield return new WaitForSeconds(GetAnimationLenght(_therapy) * _therapyLoop);
 
             _gazeController.IsActive = false;
             EnableTherapyCube(false);

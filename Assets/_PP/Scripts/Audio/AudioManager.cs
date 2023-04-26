@@ -16,6 +16,8 @@ namespace Meta.PP
         [SerializeField] private AudioDictionary[] _audioDictionary;
         [SerializeField] private AudioSource _audioSource;
 
+        private AudioTypeEnum _currentAudioTypeEnum;
+
         public bool IsPlaying()
         {
             if (_audioSource == null)
@@ -24,7 +26,7 @@ namespace Meta.PP
             }
             else
             {
-                return _audioSource.isPlaying;   
+                return _audioSource.isPlaying;
             }
         }
 
@@ -40,15 +42,27 @@ namespace Meta.PP
 
         private void PlayAudio(AudioEvent audioEvent)
         {
+            if (_currentAudioTypeEnum == audioEvent.AudioTypeEnum)
+            {
+                return;
+            }
+
+            AudioDictionary audioDictionary = _audioDictionary.FirstOrDefault(x => x.AudioTypeEnum == audioEvent.AudioTypeEnum);
+
+            if (audioDictionary == null || audioDictionary.AudioClip == _audioSource.clip)
+            {
+                return;
+            }
+
             if (_audioSource.isPlaying)
             {
                 _audioSource.Stop();
                 _audioSource.clip = null;
             }
-
-            AudioClip audioClip = _audioDictionary.First(x => x.AudioTypeEnum == audioEvent.AudioTypeEnum).AudioClip;
+            AudioClip audioClip = audioDictionary.AudioClip;
             _audioSource.clip = audioClip;
             _audioSource.Play();
+            _currentAudioTypeEnum = audioEvent.AudioTypeEnum;
         }
     }
 }
