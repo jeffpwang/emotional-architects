@@ -44,14 +44,14 @@ namespace Meta.PP
         private IEnumerator UserNotLooking()
         {
             yield return new WaitForSeconds(_notLookingDelay);
-            Events.Raise(new AudioEvent(AudioTypeEnum.ExampleAudio));
+            Events.Raise(new AudioEvent(AudioTypeEnum.EyesOnOrb));
             _notLookingCoroutine = null;
         }
 
         private IEnumerator UserMovingTooFast()
         {
             yield return new WaitForSeconds(_lookingTooFast);
-            Events.Raise(new AudioEvent(AudioTypeEnum.ExampleAudio));
+            Events.Raise(new AudioEvent(AudioTypeEnum.EyesOnOrb));
             _lookingTooFastCoroutine = null;
 
         }
