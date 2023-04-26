@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,8 +47,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlanePrefab: {fileID: 0}
   VolumePrefab: {fileID: 0}
-  PrefabOverrides: []
+  PrefabOverrides:
+  - Prefab: {fileID: 2107458253378869099, guid: fd88524e3a3a9bc4e9423f0fe05ab4bf,
+      type: 3}
+    ClassificationLabel: DESK
+    _editorClassificationIndex: 3
   VerboseLogging: 0
+  MaxSceneAnchorUpdatesPerFrame: 3
 --- !u!114 &3492968334703562747
 MonoBehaviour:
   m_ObjectHideFlags: 0
