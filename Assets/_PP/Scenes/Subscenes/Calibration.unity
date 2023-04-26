@@ -387,9 +387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a09d7b4789b2ad84483a201f9498ba80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneId: calibration
-  autoPlay: 0
-  delayBeforePlay: 1
   sequences:
   - {fileID: 810114001}
   - {fileID: 297942075}
@@ -926,17 +923,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9baf85e3036d7904a85ad52745d9a6a4,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9baf85e3036d7904a85ad52745d9a6a4,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9baf85e3036d7904a85ad52745d9a6a4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9baf85e3036d7904a85ad52745d9a6a4,
         type: 3}
@@ -946,12 +943,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9baf85e3036d7904a85ad52745d9a6a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.937
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9baf85e3036d7904a85ad52745d9a6a4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.7
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9baf85e3036d7904a85ad52745d9a6a4,
         type: 3}
@@ -1007,6 +1004,68 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1850677248}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1850677251
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850677250}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81c773cf3ad74854c9e5938e47ae6807, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1850677252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850677250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100179cc0cff53947bd2fa5b10a574f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DoThis:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 756245108}
+        m_TargetAssemblyTypeName: Meta.PP.SequencePlayer, Assembly-CSharp
+        m_MethodName: GoToNextSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  isColliding: 0
+--- !u!65 &1850677253
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850677250}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.68661696, z: 1.928531}
+  m_Center: {x: 0, y: 0.15669152, z: -0.859474}
 --- !u!1001 &1996907707
 PrefabInstance:
   m_ObjectHideFlags: 0

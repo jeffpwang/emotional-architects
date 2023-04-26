@@ -16,7 +16,17 @@ namespace Meta.PP
         [SerializeField] private AudioDictionary[] _audioDictionary;
         [SerializeField] private AudioSource _audioSource;
 
-        public bool IsPlaying() { return _audioSource.isPlaying; }
+        public bool IsPlaying()
+        {
+            if (_audioSource == null)
+            {
+                return false;
+            }
+            else
+            {
+                return _audioSource.isPlaying;   
+            }
+        }
 
         private void OnEnable()
         {

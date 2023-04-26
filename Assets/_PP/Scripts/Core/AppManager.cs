@@ -13,6 +13,7 @@ namespace Meta.PP
         public List<string> sceneNames;
         public SceneLoader sceneLoader;
         public string currentScene;
+        public int currentSceneIndex;
         
         [Header("Events")]
         public ExampleUsage exampleEvent;
@@ -47,6 +48,7 @@ namespace Meta.PP
         private void Start()
         {
             SetScene(sceneNames[0]);
+            currentSceneIndex = 0;
         }
 
         private void Update()
@@ -82,25 +84,14 @@ namespace Meta.PP
             }
         }
 
-        public void EndScene()
-        {
-            OnStop?.Invoke();
-
-            Debug.Log($"[AppManager] END SCENE: {currentScene}");
-        }
-        
         public void SetScene(string newSceneId)
         {
-            if (currentScene != null)
-            {
-                EndScene();
-            }
-            
             foreach (var scene in sceneNames)
             {
                 if (scene == newSceneId)
                 {
                     currentScene = scene;
+                    
                     currentSequenceIndex = -1;
                     
                     sceneLoader.Load(newSceneId);
@@ -108,8 +99,6 @@ namespace Meta.PP
                     sceneLoader.WhenSceneLoaded += delegate(string s)
                     {
                         currentSequencePlayer = FindObjectOfType<SequencePlayer>();
-
-                        currentSequencePlayer.PlayScene();
                     };
                     
                     Debug.Log($"[AppManager] Set current scene to: {currentScene}");
@@ -138,7 +127,10 @@ namespace Meta.PP
                 currentSequenceIndex++;
                 if (currentSequenceIndex > currentSequencePlayer.sequences.Count - 1)
                 {
-                    currentSequenceIndex = 0;
+                    currentSceneIndex++;
+                    SetScene(sceneNames[currentSceneIndex]);
+                    Debug.Log("SETTING NEW SCENE");
+                    return;
                 }
             }
             else
@@ -149,7 +141,8 @@ namespace Meta.PP
                     currentSequenceIndex = currentSequencePlayer.sequences.Count - 1;
                 }
             }
-            
+
+
             // play sequence
             currentSceneSequence = currentSequencePlayer.sequences[currentSequenceIndex];
             currentSceneSequence.PlaySequence();
