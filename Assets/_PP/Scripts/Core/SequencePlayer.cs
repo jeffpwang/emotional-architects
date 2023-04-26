@@ -14,7 +14,7 @@ namespace Meta.PP
         
         [Header("Sequences")] 
         public List<CustomSequence> sequences;
-
+        
         private void OnDisable()
         {
             // AppManager.OnPlay -= PlayScene;
@@ -24,10 +24,10 @@ namespace Meta.PP
         public void PlayScene()
         {
             // play scene automatically
-            if (autoPlay)
-            {
-                StartCoroutine(PlayAfterDelay());
-            }
+            // if (autoPlay)
+            // {
+            //     StartCoroutine(PlayAfterDelay());
+            // }
             
             // begin listening to stop controls
             // AppManager.OnPlay -= PlayScene;
@@ -41,14 +41,14 @@ namespace Meta.PP
             AppManager.OnStop -= EndScene;
         }
 
-        IEnumerator PlayAfterDelay()
-        {
-            yield return new WaitForSeconds(delayBeforePlay);
-            
-            AppManager.Instance.MoveToNextSequence(true);
-            
-            Debug.Log($"[CustomScene] Playing scene {AppManager.Instance.currentSceneSequence.name}");
-        }
+        // IEnumerator PlayAfterDelay()
+        // {
+        //     yield return new WaitForSeconds(delayBeforePlay);
+        //     
+        //     AppManager.Instance.MoveToNextSequence(true);
+        //     
+        //     Debug.Log($"[CustomScene] Playing scene {AppManager.Instance.currentSceneSequence.name}");
+        // }
         
         public void GoToNextSequence()
         {
