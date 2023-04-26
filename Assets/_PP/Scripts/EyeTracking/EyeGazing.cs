@@ -11,7 +11,7 @@ namespace Meta.PP
             Vector3 fwd = _eyeTransform.transform.TransformDirection(Vector3.forward);
             if (Physics.Raycast(_eyeTransform.transform.position, fwd, out var objectHit, 50))
             {
-                Debug.LogError("Seeing The cube");
+                Debug.LogError(objectHit.transform.name);
             }
         }
     }
