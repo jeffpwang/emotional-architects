@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Buck.MR;
+using Oculus.Interaction.PoseDetection;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -18,13 +19,10 @@ namespace Meta.PP
         public static AppManager Instance;
 
         public SequencePlayer currentSequencePlayer;
-        public List<SequencePlayer> sequencePlayers;
         public CustomSequence currentSceneSequence; 
         
         private int currentSequenceIndex = -1;
         // scene events
-        public delegate void SetSceneAction(string sceneName);
-        public static event SetSceneAction OnSceneSet;
         public delegate void PlayAction();
         public static event PlayAction OnPlay;
         public delegate void StopAction();
@@ -33,10 +31,7 @@ namespace Meta.PP
         public bool isPlaying = false;
         
         List<IInteractable> Interactables = new List<IInteractable>(); // objects that detect user actions
-        
-        // holds lock values to manage the Windows cursor
-        CursorLockMode lockMode;
-        
+
         private void Awake()
         {
             if (Instance == null)
@@ -58,7 +53,7 @@ namespace Meta.PP
                 {
                     EndScene();
                 }
-                // move positions
+                // move sequences
                 if (OVRInput.GetDown(OVRInput.RawButton.X) || Input.GetKeyDown(KeyCode.RightArrow))
                 {
                     MoveToNextSequence(true);
@@ -70,39 +65,32 @@ namespace Meta.PP
             }
             else
             {
-                // DEBUG KEYS
-                if (Input.GetKeyDown(KeyCode.Keypad0)) // set to welcome
-                {
-                    SetScene(sceneNames[0]);
-                }
-                if (Input.GetKeyDown(KeyCode.Keypad1)) // set to safe space
-                {
-                    SetScene(sceneNames[1]);
-                }
-                if (Input.GetKeyDown(KeyCode.Keypad2)) // set to calibration
-                {
-                    SetScene(sceneNames[2]);
-                }
-                if (Input.GetKeyDown(KeyCode.Keypad2)) // set to therapy
-                {
-                    SetScene(sceneNames[3]);
-                }
-                if (Input.GetKeyDown(KeyCode.Keypad2)) // set to ending
-                {
-                    SetScene(sceneNames[4]);
-                }
-                
                 if (Input.GetKeyDown(KeyCode.Space)) 
                 {
                     StartPlaying();
                 }
             }
-            // hide and lock cursor for camera debug mode
-            if (Application.isFocused)
+            
+            // DEBUG KEYS
+            if (Input.GetKeyDown(KeyCode.Keypad0)) // set to welcome
             {
-                lockMode = CursorLockMode.Locked;
-                Cursor.lockState = lockMode;
-                Cursor.visible = false;
+                SetScene(sceneNames[0]);
+            }
+            if (Input.GetKeyDown(KeyCode.Keypad1)) // set to safe space
+            {
+                SetScene(sceneNames[1]);
+            }
+            if (Input.GetKeyDown(KeyCode.Keypad2)) // set to calibration
+            {
+                SetScene(sceneNames[2]);
+            }
+            if (Input.GetKeyDown(KeyCode.Keypad2)) // set to therapy
+            {
+                SetScene(sceneNames[3]);
+            }
+            if (Input.GetKeyDown(KeyCode.Keypad2)) // set to ending
+            {
+                SetScene(sceneNames[4]);
             }
         }
         private void OnEnable()
@@ -158,10 +146,14 @@ namespace Meta.PP
                 if (scene == newSceneId)
                 {
                     currentScene = scene;
-                    
-                    OnSceneSet?.Invoke(newSceneId);
-                    
+
                     sceneLoader.Load(newSceneId);
+                    
+                    sceneLoader.WhenSceneLoaded += delegate(string s)
+                    {
+                        currentSequencePlayer = FindObjectOfType<SequencePlayer>();
+                        currentSequencePlayer.SetupScene();
+                    };
                     
                     Debug.Log($"[AppManager] Set current scene to: {currentScene}");
                     return;

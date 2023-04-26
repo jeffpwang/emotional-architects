@@ -14,37 +14,16 @@ namespace Meta.PP
         [Header("Sequences")] 
         public List<CustomSequence> sequences;
 
-        private void OnEnable()
-        {
-            AppManager.OnSceneSet += SetupScene;
-        }
-
         private void OnDisable()
         {
-            AppManager.OnSceneSet -= SetupScene;
             AppManager.OnPlay -= PlayScene;
             AppManager.OnStop -= EndScene;
         }
-        
-        private void OnDestroy()
+
+        public void SetupScene()
         {
-            AppManager.OnSceneSet -= SetupScene;
-            AppManager.OnPlay -= PlayScene;
-            AppManager.OnStop -= EndScene;
-        }
-        
-        public void SetupScene(string sceneName)
-        {
-            if (sceneName == sceneId)
-            {
-                // begin listening for play controls
-                AppManager.OnPlay += PlayScene;
-            }
-            else
-            {
-                AppManager.OnPlay -= PlayScene;
-                AppManager.OnStop -= EndScene;
-            }
+            // begin listening for play controls
+            AppManager.OnPlay += PlayScene;
         }
 
         public void PlayScene()
