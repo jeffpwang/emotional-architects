@@ -771,9 +771,9 @@ MonoBehaviour:
   virtualGreenScreenDepthTolerance: 0.2
   mrcActivationMode: 0
   isInsightPassthroughEnabled: 1
-  requestBodyTrackingPermissionOnStartup: 0
-  requestFaceTrackingPermissionOnStartup: 0
-  requestEyeTrackingPermissionOnStartup: 0
+  requestBodyTrackingPermissionOnStartup: 1
+  requestFaceTrackingPermissionOnStartup: 1
+  requestEyeTrackingPermissionOnStartup: 1
   _localDimming: 1
   _trackingOriginType: 1
   usePositionTracking: 1

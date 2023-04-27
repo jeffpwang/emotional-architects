@@ -22,7 +22,7 @@ public class ExperienceTable : MonoBehaviour
     {
         if ((AppManager.Instance.desk != null) && !isAttached)
         {
-            Attach();
+            StartCoroutine(AttachToTable());
             isAttached = true;
         }
     }
@@ -31,5 +31,11 @@ public class ExperienceTable : MonoBehaviour
     {
         transform.position = AppManager.Instance.desk.transform.position + offset;
         // transform.rotation = AppManager.Instance.desk.transform.rotation;
+    }
+
+    IEnumerator AttachToTable()
+    {
+        yield return new WaitForSeconds(3f);
+        Attach();
     }
 }
