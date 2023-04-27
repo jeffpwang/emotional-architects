@@ -11,10 +11,14 @@ namespace Meta.PP
         [SerializeField] private Animator _split;
         [SerializeField] private GazeController _gazeController;
         [SerializeField] private float _therapyLoop;
+        [SerializeField] private Transform _timerBar;
+
+        private float _startingScaleX;
 
         private void Awake()
         {
             StartCoroutine(AnimationSequence());
+            StartCoroutine(TimeBarSequence());
         }
 
         private IEnumerator AnimationSequence()
@@ -36,6 +40,24 @@ namespace Meta.PP
             EnableSplitCube(true);
             yield return new WaitForSeconds(GetAnimationLenght(_split) - 0.05f);
             EnableSplitCube(false);
+        }
+
+        private IEnumerator TimeBarSequence()
+        {
+            _startingScaleX = _timerBar.localScale.x;
+            float timer = 0;
+
+            float lenght = GetAnimationLenght(_merge) + GetAnimationLenght(_start)
+               + GetAnimationLenght(_therapy) * _therapyLoop + GetAnimationLenght(_split) - 0.2f;
+
+            while (timer < lenght)
+            {
+                var increment = Time.deltaTime;
+                timer += Time.deltaTime;
+                var newScale = (1 - timer / lenght) * _startingScaleX;
+                _timerBar.localScale = new Vector3(newScale, _timerBar.localScale.y, _timerBar.localScale.z);
+                yield return new WaitForSeconds(increment);
+            }
         }
 
         private void EnableCube(Animator target, bool enable)
