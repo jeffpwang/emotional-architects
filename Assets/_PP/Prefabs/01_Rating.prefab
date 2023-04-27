@@ -33,10 +33,10 @@ RectTransform:
   m_Father: {fileID: 8834927057971648075}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 120, y: -55.260002}
+  m_SizeDelta: {x: 208, y: 12.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6402691330049779719
 CanvasRenderer:
@@ -169,10 +169,10 @@ RectTransform:
   m_Father: {fileID: 8834927059234120589}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 120, y: -45.305}
+  m_SizeDelta: {x: 208, y: 25.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6402691328518839745
 CanvasRenderer:
@@ -451,10 +451,10 @@ RectTransform:
   m_Father: {fileID: 8834927059234120589}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 120, y: -20.205}
+  m_SizeDelta: {x: 208, y: 16.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1412270309969052697
 CanvasRenderer:
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Place your feelings in the box
+  m_text: Save it on the box.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f5aeb9c6de7614db2631011b869bc3, type: 2}
   m_sharedMaterial: {fileID: -5839354330806206608, guid: b8f5aeb9c6de7614db2631011b869bc3,
@@ -587,10 +587,10 @@ RectTransform:
   m_Father: {fileID: 8834927057971648075}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 120, y: -28.405}
+  m_SizeDelta: {x: 208, y: 32.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1412270309092405727
 CanvasRenderer:
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I have bad anxiety
+  m_text: Pick an object and scale it to represent your level of distress.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8f5aeb9c6de7614db2631011b869bc3, type: 2}
   m_sharedMaterial: {fileID: -5839354330806206608, guid: b8f5aeb9c6de7614db2631011b869bc3,
@@ -2158,7 +2158,6 @@ Transform:
   - {fileID: 4473469964185875329}
   - {fileID: 7551636107702524911}
   - {fileID: 44327317521343283}
-  - {fileID: 611604230857578418}
   m_Father: {fileID: 7551636109207728780}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
@@ -2364,7 +2363,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -0.1153, y: 0.022199988}
-  m_SizeDelta: {x: 240, y: 0}
+  m_SizeDelta: {x: 240, y: 70.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8625282690362499048
 Canvas:
@@ -2549,7 +2548,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -0.178, y: 0.0172}
-  m_SizeDelta: {x: 240, y: 0}
+  m_SizeDelta: {x: 240, y: 73.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8625282688823077422
 Canvas:
@@ -3023,81 +3022,6 @@ MonoBehaviour:
   _radiusBottomRight: 0.02
   _borderInnerRadius: 0.002
   _borderOuterRadius: 0
---- !u!1001 &7104260314288240234
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 7551636109316477243}
-    m_Modifications:
-    - target: {fileID: 7704460301792076248, guid: eaa3407b385a0be43b94d855ff0f5300,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704460301792076248, guid: eaa3407b385a0be43b94d855ff0f5300,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.521
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704460301792076248, guid: eaa3407b385a0be43b94d855ff0f5300,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704460301792076248, guid: eaa3407b385a0be43b94d855ff0f5300,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.536
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704460301792076248, guid: eaa3407b385a0be43b94d855ff0f5300,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.41698974
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704460301792076248, guid: eaa3407b385a0be43b94d855ff0f5300,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704460301792076248, guid: eaa3407b385a0be43b94d855ff0f5300,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.9089113
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704460301792076248, guid: eaa3407b385a0be43b94d855ff0f5300,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704460301792076248, guid: eaa3407b385a0be43b94d855ff0f5300,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704460301792076248, guid: eaa3407b385a0be43b94d855ff0f5300,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -130.711
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704460301792076248, guid: eaa3407b385a0be43b94d855ff0f5300,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7704460301792076251, guid: eaa3407b385a0be43b94d855ff0f5300,
-        type: 3}
-      propertyPath: m_Name
-      value: 02_Hand
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: eaa3407b385a0be43b94d855ff0f5300, type: 3}
---- !u!4 &611604230857578418 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7704460301792076248, guid: eaa3407b385a0be43b94d855ff0f5300,
-    type: 3}
-  m_PrefabInstance: {fileID: 7104260314288240234}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7551636107904776791
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class RatingScale : MonoBehaviour
 
     public int currentPosition = 0;
 
-    private void OnEnable()
+    private void OnDisable()
     {
         currentPosition = 0;
         select.transform.localPosition = positions[0];
@@ -36,5 +36,11 @@ public class RatingScale : MonoBehaviour
         }
 
         select.transform.localPosition = positions[currentPosition];
+    }
+
+    public void SetTo(int index)
+    {
+        currentPosition = index;
+        select.transform.localPosition = positions[index];
     }
 }

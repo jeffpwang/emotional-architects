@@ -18,5 +18,9 @@ namespace Meta.PP
         BackgroundLoop = 13,
         Tap = 14,
         HandGesture = 15,
+        RatingStart1 = 16, 
+        RatingStart2 = 17, 
+        RatingStart3 = 18, 
+        RatingStart4 = 19, 
     }
 }

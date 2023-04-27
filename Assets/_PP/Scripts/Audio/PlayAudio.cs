@@ -11,6 +11,7 @@ namespace Meta.PP
         public void PlaySound()
         {
             Events.Raise(new AudioEvent(soundType));
+            Debug.Log($"PLAYING AUDIO {soundType}");
         }
     }
 }
