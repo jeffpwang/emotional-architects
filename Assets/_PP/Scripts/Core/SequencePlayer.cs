@@ -9,10 +9,19 @@ namespace Meta.PP
     {
         [Header("Sequences")] 
         public List<CustomSequence> sequences;
+        
+        public void StartSequence()
+        {
+            AppManager.Instance.EndSequence();
+            sequences[0].PlaySequence();
+            
+            AppManager.Instance.currentSceneSequence = sequences[0];
+        }
 
         public void GoToNextSequence()
         {
-            AppManager.Instance.MoveToNextSequence(true);
+            AppManager.Instance.MoveToNextSequence(true); 
+            Debug.Log($"GOING TO NEXT FROM {gameObject.name}");
         }
     }
 }

@@ -9,11 +9,15 @@ namespace Meta.PP
 {
     public class AppManager : MonoBehaviour
     {
-        [Header("Scene Loading")]
-        public List<string> sceneNames;
-        public SceneLoader sceneLoader;
-        public string currentScene;
+        public List<SequencePlayer> sequencePlayers;
+        public OVRSceneManager sceneManager;
+        public DeskPrefabScript desk;
         public int currentSceneIndex;
+        // [Header("Scene Loading")] 
+        // public List<string> sceneNames;
+        // public SceneLoader sceneLoader;
+        // public string currentScene;
+        // public int currentSceneIndex;
         
         [Header("Events")]
         public ExampleUsage exampleEvent;
@@ -22,10 +26,10 @@ namespace Meta.PP
         public SequencePlayer currentSequencePlayer;
         public CustomSequence currentSceneSequence; 
         
-        private int currentSequenceIndex = -1;
+        public int currentSequenceIndex = -1;
         // scene events
-        public delegate void PlayAction();
-        public static event PlayAction OnPlay;
+        public delegate void SceneStartAction();
+        public static event SceneStartAction OnSceneStart;
         public delegate void StopAction();
         public static event StopAction OnStop;
 
@@ -47,8 +51,13 @@ namespace Meta.PP
 
         private void Start()
         {
-            SetScene(sceneNames[0]);
-            currentSceneIndex = 0;
+            sceneManager.SceneModelLoadedSuccessfully += StartExperience;
+        }
+
+        public void StartExperience()
+        {
+            Debug.Log("STARTING EXPERIENCE");
+            PlayScene(0);
         }
 
         private void Update()
@@ -64,48 +73,62 @@ namespace Meta.PP
 
             if (Input.GetKeyDown(KeyCode.Keypad0)) // set to welcome
             {
-                SetScene(sceneNames[0]);
+                PlayScene(0);
+                // SetScene(sceneNames[0]);
             }
             if (Input.GetKeyDown(KeyCode.Keypad1)) // set to safe space
             {
-                SetScene(sceneNames[1]);
+                PlayScene(1);
+                // SetScene(sceneNames[1]);
             }
             if (Input.GetKeyDown(KeyCode.Keypad2)) // set to calibration
             {
-                SetScene(sceneNames[2]);
+                PlayScene(2);
+                // SetScene(sceneNames[2]);
             }
             if (Input.GetKeyDown(KeyCode.Keypad3)) // set to therapy
             {
-                SetScene(sceneNames[3]);
+                PlayScene(3);
+                // SetScene(sceneNames[3]);
             }
             if (Input.GetKeyDown(KeyCode.Keypad4)) // set to ending
             {
-                SetScene(sceneNames[4]);
+                PlayScene(4);
+                // SetScene(sceneNames[4]);
             }
         }
 
-        public void SetScene(string newSceneId)
+        // public void SetScene(string newSceneId)
+        // {
+        //     foreach (var scene in sceneNames)
+        //     {
+        //         if (scene == newSceneId)
+        //         {
+        //             currentScene = scene;
+        //             
+        //             currentSequenceIndex = -1;
+        //             
+        //             sceneLoader.Load(newSceneId);
+        //             
+        //             sceneLoader.WhenSceneLoaded += delegate(string s)
+        //             {
+        //                 currentSequencePlayer = FindObjectOfType<SequencePlayer>();
+        //             };
+        //             
+        //             Debug.Log($"[AppManager] Set current scene to: {currentScene}");
+        //             return;
+        //         }   
+        //     }
+        //     Debug.LogError("[AppManager] NO SCENE FOUND");
+        // }
+
+        public void PlayScene(int index)
         {
-            foreach (var scene in sceneNames)
-            {
-                if (scene == newSceneId)
-                {
-                    currentScene = scene;
-                    
-                    currentSequenceIndex = -1;
-                    
-                    sceneLoader.Load(newSceneId);
-                    
-                    sceneLoader.WhenSceneLoaded += delegate(string s)
-                    {
-                        currentSequencePlayer = FindObjectOfType<SequencePlayer>();
-                    };
-                    
-                    Debug.Log($"[AppManager] Set current scene to: {currentScene}");
-                    return;
-                }   
-            }
-            Debug.LogError("[AppManager] NO SCENE FOUND");
+            currentSceneIndex = index;
+            currentSequenceIndex = 0;
+            currentSequencePlayer = sequencePlayers[currentSceneIndex];
+            
+            currentSequencePlayer.StartSequence();
         }
         
         public void MoveToNextSequence(bool moveNext, bool endLast = true)
@@ -127,9 +150,10 @@ namespace Meta.PP
                 currentSequenceIndex++;
                 if (currentSequenceIndex > currentSequencePlayer.sequences.Count - 1)
                 {
+                    // GOING TO NEXT SCENE WHEN END OF SEQUENCE HIT
                     currentSceneIndex++;
-                    SetScene(sceneNames[currentSceneIndex]);
-                    Debug.Log("SETTING NEW SCENE");
+                    PlayScene(currentSceneIndex);
+                    Debug.Log($"GOING TO NEXT SCENE...{sequencePlayers[currentSceneIndex].gameObject.name}");
                     return;
                 }
             }
@@ -146,6 +170,14 @@ namespace Meta.PP
             // play sequence
             currentSceneSequence = currentSequencePlayer.sequences[currentSequenceIndex];
             currentSceneSequence.PlaySequence();
+        }
+
+        public void EndSequence()
+        {
+            if (currentSceneSequence != null)
+            {
+                currentSceneSequence.EndSequence();
+            }
         }
     }
 }

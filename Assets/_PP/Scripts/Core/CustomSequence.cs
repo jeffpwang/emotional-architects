@@ -8,6 +8,8 @@ namespace Meta.PP
     // parent class for individual sequences that play during a scene
     public class CustomSequence : MonoBehaviour
     {
+        public bool autoNext = false;
+        public float nextDelay = 1f;
         public bool hideChildrenOnStart = true;
         public float actionDelay = 1f;
         
@@ -17,7 +19,8 @@ namespace Meta.PP
         public UnityEvent OnEndSequence;
         
         protected bool _isWaiting = false; // action delay coroutine
-
+        protected bool _isWaiting_2 = false;
+        
         public void Start()
         {
             if (hideChildrenOnStart)
@@ -59,10 +62,29 @@ namespace Meta.PP
             
             _isWaiting = false;
         }
+        protected IEnumerator GoToNext()
+        {
+            if (_isWaiting_2)
+            {
+                yield return null;
+            }
 
+            _isWaiting_2 = true;
+            yield return new WaitForSeconds(nextDelay);
+
+            AppManager.Instance.MoveToNextSequence(true);
+            Debug.Log($"[CustomSequence] AUTO GO TO NEXT...{name}");
+            _isWaiting_2 = false;
+        }
         public void TriggerAction()
         {
             OnPlaySequence?.Invoke();
+
+            if (autoNext)
+            {
+                StartCoroutine(GoToNext());
+            }
+            
             Debug.Log($"[CustomSequence] PLAY SEQUENCE...{name}");
         }
 

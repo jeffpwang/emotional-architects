@@ -8,21 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_PP/Scenes/MainDemo.unity
     guid: 40d302287edc50744bdeb3156b77ce5c
-  - enabled: 1
-    path: Assets/_PP/Scenes/Subscenes/Calibration.unity
-    guid: c898d6be47f483245b03ebe405dc2e3e
-  - enabled: 1
-    path: Assets/_PP/Scenes/Subscenes/Ending.unity
-    guid: dab3b7d6b24b4874b9b68353062e9222
-  - enabled: 1
-    path: Assets/_PP/Scenes/Subscenes/SafeSpace.unity
-    guid: 37697748643de694cb3ca1e7800c2df7
-  - enabled: 1
-    path: Assets/_PP/Scenes/Subscenes/Therapy.unity
-    guid: 5cba48774deeb6b47bfaec87cd853e44
-  - enabled: 1
-    path: Assets/_PP/Scenes/Subscenes/Welcome.unity
-    guid: 123fec32e01fde54faf7ad94cdc7d430
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ab82cc0c76a3e9742aba17893385fb8a,
       type: 2}
