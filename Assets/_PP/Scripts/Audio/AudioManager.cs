@@ -16,7 +16,7 @@ namespace Meta.PP
         [SerializeField] private AudioDictionary[] _audioDictionary;
         [SerializeField] private AudioSource _audioSource;
 
-        private AudioTypeEnum _currentAudioTypeEnum;
+        private AudioTypeEnum _currentAudioTypeEnum = AudioTypeEnum.Ending;
 
         public bool IsPlaying()
         {
