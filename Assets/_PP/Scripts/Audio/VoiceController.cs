@@ -66,6 +66,12 @@ public class VoiceController : MonoBehaviour
                 case VoiceControllerState.TextToSpeech:
                     tTSSpeaker.Speak(response["text"]);
                     break;
+                case VoiceControllerState.Keywords:
+                    if (!FindObjectOfType<AudioManager>().IsPlaying())
+                    {
+                        Events.Raise(new AudioEvent(AudioTypeEnum.PositiveBelief));
+                    }
+                    break;
             }
         }
     }
@@ -94,6 +100,9 @@ public class VoiceController : MonoBehaviour
 
     public void PlayFeedback()
     {
-        Events.Raise(new AudioEvent(AudioTypeEnum.NegativeBelief));
+        if (_voiceControllerState == VoiceControllerState.Keywords)
+        {
+            Events.Raise(new AudioEvent(AudioTypeEnum.NegativeBelief));
+        }
     }
 }

@@ -6379,6 +6379,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1528060294, guid: a5eef99b8150d574c8fcf2425c678de3, type: 3}
+      propertyPath: _voiceControllerState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
         type: 3}
       propertyPath: m_RootOrder
