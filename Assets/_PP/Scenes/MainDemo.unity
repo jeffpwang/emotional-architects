@@ -4744,11 +4744,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sequencePlayers:
-  - {fileID: 483649004}
-  - {fileID: 829000917}
   - {fileID: 827945892}
   - {fileID: 1717118013}
   - {fileID: 756245108}
+  - {fileID: 483649004}
+  - {fileID: 829000917}
   sceneManager: {fileID: 313112540}
   desk: {fileID: 0}
   currentSceneIndex: 0
