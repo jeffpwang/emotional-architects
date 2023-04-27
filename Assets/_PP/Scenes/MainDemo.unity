@@ -2480,7 +2480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endDelay: 0
   autoNext: 1
-  nextDelay: 30
+  nextDelay: 15
   hideChildrenOnStart: 1
   actionDelay: 1
   OnStart:
