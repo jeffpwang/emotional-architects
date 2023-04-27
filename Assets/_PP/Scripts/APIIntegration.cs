@@ -30,7 +30,7 @@ public class APIIntegration : MonoBehaviour
         // Create an instance of ImageGenerationParameters and set its values
         ImageGenerationParameters parameters = new ImageGenerationParameters();
         parameters.key = stableDiffusionApiKey;
-        parameters.prompt = $"{prompt} panorama 4k photorealistic aesthetic";
+        parameters.prompt = $"{prompt} cinematic, 4k, (((monoscopic 360 vr))), ((hdri)), ((panorama)), (((equirectangular projection))";
         parameters.negative_prompt = "";
         parameters.width = "1024";
         parameters.height = "1024";
