@@ -4744,11 +4744,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sequencePlayers:
+  - {fileID: 483649004}
+  - {fileID: 829000917}
   - {fileID: 827945892}
   - {fileID: 1717118013}
   - {fileID: 756245108}
-  - {fileID: 483649004}
-  - {fileID: 829000917}
   sceneManager: {fileID: 313112540}
   desk: {fileID: 0}
   currentSceneIndex: 0
@@ -6418,7 +6418,7 @@ PrefabInstance:
     - target: {fileID: 8974988434268868681, guid: a5eef99b8150d574c8fcf2425c678de3,
         type: 3}
       propertyPath: _audioDictionary.Array.size
-      value: 20
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 8974988434268868681, guid: a5eef99b8150d574c8fcf2425c678de3,
         type: 3}
@@ -6442,6 +6442,16 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: a52a1dfab7f81134586a29784297d8bd, type: 3}
     - target: {fileID: 8974988434268868681, guid: a5eef99b8150d574c8fcf2425c678de3,
         type: 3}
+      propertyPath: _audioDictionary.Array.data[20].AudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ec250f48c373f54a9d96d6e27fd4678, type: 3}
+    - target: {fileID: 8974988434268868681, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: _audioDictionary.Array.data[21].AudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0361409cf50eb1c42967c3a670590fbf, type: 3}
+    - target: {fileID: 8974988434268868681, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
       propertyPath: _audioDictionary.Array.data[16].AudioTypeEnum
       value: 16
       objectReference: {fileID: 0}
@@ -6459,6 +6469,16 @@ PrefabInstance:
         type: 3}
       propertyPath: _audioDictionary.Array.data[19].AudioTypeEnum
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974988434268868681, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: _audioDictionary.Array.data[20].AudioTypeEnum
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974988434268868681, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: _audioDictionary.Array.data[21].AudioTypeEnum
+      value: 21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5eef99b8150d574c8fcf2425c678de3, type: 3}
@@ -13845,6 +13865,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2111260656}
+        m_TargetAssemblyTypeName: Meta.PP.PlayAudio, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   OnEndSequence:
     m_PersistentCalls:
       m_Calls:
@@ -14227,6 +14259,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1444862179}
     m_Modifications:
+    - target: {fileID: 3282178608830194869, guid: db016bf6b0ca78e47ab31f0eb28efd34,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219175189538797396, guid: db016bf6b0ca78e47ab31f0eb28efd34,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4219175189538797397, guid: db016bf6b0ca78e47ab31f0eb28efd34,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -14391,6 +14433,26 @@ PrefabInstance:
         type: 3}
       propertyPath: OnPlaySequence.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219175191010908193, guid: db016bf6b0ca78e47ab31f0eb28efd34,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219175191082973202, guid: db016bf6b0ca78e47ab31f0eb28efd34,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219175191188135574, guid: db016bf6b0ca78e47ab31f0eb28efd34,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539000677310441847, guid: db016bf6b0ca78e47ab31f0eb28efd34,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db016bf6b0ca78e47ab31f0eb28efd34, type: 3}
@@ -14691,6 +14753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2111260655}
   - component: {fileID: 2111260654}
+  - component: {fileID: 2111260656}
   m_Layer: 0
   m_Name: WelcomeAudio
   m_TagString: Untagged
@@ -14726,6 +14789,19 @@ Transform:
   m_Father: {fileID: 1325685146}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111260656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111260653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ed8818d5e9c75428d8947d9836ab85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundType: 20
 --- !u!1 &2143080934
 GameObject:
   m_ObjectHideFlags: 0

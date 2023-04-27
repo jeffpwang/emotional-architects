@@ -22,5 +22,7 @@ namespace Meta.PP
         RatingStart2 = 17, 
         RatingStart3 = 18, 
         RatingStart4 = 19, 
+        TakeMyHandBegin = 20, 
+        TakeMyHandNew = 21, 
     }
 }
