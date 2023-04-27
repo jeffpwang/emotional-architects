@@ -13,6 +13,7 @@ public class VoiceController : MonoBehaviour
     {
         AICommunication = 0,
         TextToSpeech = 1,
+        Keywords = 2,
     }
 
     [SerializeField] private AppVoiceExperience appVoiceExperience;
@@ -24,11 +25,25 @@ public class VoiceController : MonoBehaviour
     private void OnEnable()
     {
         appVoiceExperience.VoiceEvents.OnResponse.AddListener(OnRequestResponse);
+        appVoiceExperience.VoiceEvents.OnStartListening.AddListener(OnStartListening);
+        appVoiceExperience.VoiceEvents.OnStoppedListening.AddListener(OnStoppedListening);
     }
 
     private void OnDisable()
     {
         appVoiceExperience.VoiceEvents.OnResponse.RemoveListener(OnRequestResponse);
+        appVoiceExperience.VoiceEvents.OnStartListening.RemoveListener(OnStartListening);
+        appVoiceExperience.VoiceEvents.OnStoppedListening.RemoveListener(OnStoppedListening);
+    }
+
+    private void OnStoppedListening()
+    {
+        Debug.Log(nameof(OnStoppedListening));
+    }
+
+    private void OnStartListening()
+    {
+        Debug.Log(nameof(OnStartListening));
     }
 
     private void Update()
@@ -50,6 +65,12 @@ public class VoiceController : MonoBehaviour
                     break;
                 case VoiceControllerState.TextToSpeech:
                     tTSSpeaker.Speak(response["text"]);
+                    break;
+                case VoiceControllerState.Keywords:
+                    if (!FindObjectOfType<AudioManager>().IsPlaying())
+                    {
+                        Events.Raise(new AudioEvent(AudioTypeEnum.PositiveBelief));
+                    }
                     break;
             }
         }
@@ -75,5 +96,13 @@ public class VoiceController : MonoBehaviour
     public void SetVoiceControllerState(VoiceControllerState voiceControllerState)
     {
         _voiceControllerState = voiceControllerState;
+    }
+
+    public void PlayFeedback()
+    {
+        if (_voiceControllerState == VoiceControllerState.Keywords)
+        {
+            Events.Raise(new AudioEvent(AudioTypeEnum.NegativeBelief));
+        }
     }
 }
