@@ -78,8 +78,8 @@ public class VoiceController : MonoBehaviour
 
     public void SetActivation(bool toActivated)
     {
-        if (_active != toActivated)
-        {
+        // if (_active != toActivated)
+        // {
             _active = toActivated;
             if (_active)
             {
@@ -89,7 +89,7 @@ public class VoiceController : MonoBehaviour
             {
                 appVoiceExperience.Deactivate();
             }
-        }
+        // }
     }
 
 
