@@ -735,10 +735,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Voice: {fileID: 3584447571428947518}
   ValidateEarly: 0
-  intent: change_color
-  confidenceThreshold: 0.9
+  intent: keyword
+  confidenceThreshold: 0.99
   valueMatchers:
-  - path: entities.color:color[0].value
+  - path: entities.keyword:keyword[0].value
     witValueReference: {fileID: 0}
     contentRequired: 1
     matchMethod: 0
@@ -751,10 +751,10 @@ MonoBehaviour:
   onMultiValueEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ExampleVoiceScript, Assembly-CSharp
-        m_MethodName: EnableCube
-        m_Mode: 6
+      - m_Target: {fileID: 1528060294}
+        m_TargetAssemblyTypeName: VoiceController, Assembly-CSharp
+        m_MethodName: PlayFeedback
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
