@@ -29,8 +29,12 @@ public class ExperienceTable : MonoBehaviour
 
     public void Attach()
     {
-        transform.position = AppManager.Instance.desk.transform.position + offset;
-        // transform.rotation = AppManager.Instance.desk.transform.rotation;
+        transform.parent = AppManager.Instance.desk.transform;
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.identity;
+
+        transform.localPosition += offset;
+        transform.localRotation = Quaternion.Euler(0, 90, 0);;
     }
 
     IEnumerator AttachToTable()

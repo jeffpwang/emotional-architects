@@ -56,7 +56,7 @@ namespace Oculus.Interaction.Samples
             for (int i = 0; i < _poses.Length; i++)
             {
                 _poseActiveVisuals[i] = Instantiate(_poseActiveVisualPrefab);
-                _poseActiveVisuals[i].GetComponentInChildren<TextMeshPro>().text = _poses[i].name;
+                // _poseActiveVisuals[i].GetComponentInChildren<TextMeshPro>().text = _poses[i].name;
                 _poseActiveVisuals[i].GetComponentInChildren<ParticleSystemRenderer>().material = _onSelectIcons[i];
                 _poseActiveVisuals[i].SetActive(false);
 

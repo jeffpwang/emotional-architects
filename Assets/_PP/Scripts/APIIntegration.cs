@@ -117,6 +117,7 @@ public class APIIntegration : MonoBehaviour
                 {
                     Renderer renderer = sphere.GetComponent<Renderer>();
                     renderer.material.mainTexture = texture;
+                    // renderer.enabled = true;
                 }
                 else
                 {

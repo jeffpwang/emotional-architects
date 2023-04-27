@@ -8,6 +8,8 @@ namespace Meta.PP
     // parent class for individual sequences that play during a scene
     public class CustomSequence : MonoBehaviour
     {
+        public float endDelay = 0f;
+        
         public bool autoNext = false;
         public float nextDelay = 1f;
         public bool hideChildrenOnStart = true;
@@ -20,6 +22,7 @@ namespace Meta.PP
         
         protected bool _isWaiting = false; // action delay coroutine
         protected bool _isWaiting_2 = false;
+        protected bool _isWaiting_3 = false;
         
         public void Start()
         {
@@ -98,14 +101,28 @@ namespace Meta.PP
         public void EndSequence()
         {
             StopAllCoroutines();
+            StartCoroutine(TriggerEnd());
+        }
+
+        IEnumerator TriggerEnd()
+        {
+            if (_isWaiting_3)
+            {
+                yield return null;
+            }
+
+            _isWaiting_3 = true;
             
+            yield return new WaitForSeconds(endDelay);
+
             OnEndSequence?.Invoke();
             
             AppManager.OnStop -= EndSequence;
             
             Debug.Log($"[CustomSequence: END SEQUENCE {gameObject.name}]");
+            
+            _isWaiting_3 = false;
         }
-        
     }
 
 }
