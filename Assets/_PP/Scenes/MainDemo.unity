@@ -1538,6 +1538,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2253d75e3ddc644b8153409c62dd74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &314096307 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1528060294, guid: a5eef99b8150d574c8fcf2425c678de3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1305124334}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563db89edb4ad0348bccf8d74555c1bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &349784077
 GameObject:
   m_ObjectHideFlags: 0
@@ -6444,18 +6456,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3584447571806364220, guid: a5eef99b8150d574c8fcf2425c678de3,
         type: 3}
+      propertyPath: onMultiValueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571806364220, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
       propertyPath: onMultiValueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1011015475}
+      objectReference: {fileID: 314096307}
     - target: {fileID: 3584447571806364220, guid: a5eef99b8150d574c8fcf2425c678de3,
         type: 3}
       propertyPath: onMultiValueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: PlayFeedback
       objectReference: {fileID: 0}
     - target: {fileID: 3584447571806364220, guid: a5eef99b8150d574c8fcf2425c678de3,
         type: 3}
       propertyPath: onMultiValueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: VoiceController, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5eef99b8150d574c8fcf2425c678de3, type: 3}

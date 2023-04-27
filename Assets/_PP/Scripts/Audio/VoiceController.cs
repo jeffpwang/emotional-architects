@@ -13,6 +13,7 @@ public class VoiceController : MonoBehaviour
     {
         AICommunication = 0,
         TextToSpeech = 1,
+        Keywords = 2,
     }
 
     [SerializeField] private AppVoiceExperience appVoiceExperience;
@@ -89,5 +90,10 @@ public class VoiceController : MonoBehaviour
     public void SetVoiceControllerState(VoiceControllerState voiceControllerState)
     {
         _voiceControllerState = voiceControllerState;
+    }
+
+    public void PlayFeedback()
+    {
+        Events.Raise(new AudioEvent(AudioTypeEnum.NegativeBelief));
     }
 }
