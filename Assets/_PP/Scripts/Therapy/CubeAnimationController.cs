@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Meta.PP
 {
@@ -11,14 +12,24 @@ namespace Meta.PP
         [SerializeField] private Animator _split;
         [SerializeField] private GazeController _gazeController;
         [SerializeField] private float _therapyLoop;
+        [SerializeField] private Transform _timerBar;
 
-        private void Awake()
+        private float _startingScaleX;
+
+        private void Start()
+        {
+            StartTherapy();
+        }
+
+        public void StartTherapy()
         {
             StartCoroutine(AnimationSequence());
+            StartCoroutine(TimeBarSequence());
         }
 
         private IEnumerator AnimationSequence()
         {
+            yield return new WaitForSeconds(1);
             EnableMergeCube(true);
             yield return new WaitForSeconds(GetAnimationLenght(_merge) - 0.05f);
 
@@ -36,6 +47,26 @@ namespace Meta.PP
             EnableSplitCube(true);
             yield return new WaitForSeconds(GetAnimationLenght(_split) - 0.05f);
             EnableSplitCube(false);
+        }
+
+        private IEnumerator TimeBarSequence()
+        {
+            yield return new WaitForSeconds(1);
+            _timerBar.gameObject.SetActive(true);
+            _startingScaleX = _timerBar.localScale.x;
+            float timer = 0;
+
+            float lenght = 17.5f;
+
+            while (timer < lenght)
+            {
+                var increment = Time.deltaTime;
+                timer += Time.deltaTime;
+                var newScale = (1 - timer / lenght) * _startingScaleX;
+                _timerBar.localScale = new Vector3(newScale, _timerBar.localScale.y, _timerBar.localScale.z);
+                yield return new WaitForSeconds(increment);
+            }
+            _timerBar.gameObject.SetActive(false);
         }
 
         private void EnableCube(Animator target, bool enable)
