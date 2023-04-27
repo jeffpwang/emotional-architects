@@ -463,7 +463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endDelay: 0
   autoNext: 1
-  nextDelay: 10
+  nextDelay: 15
   hideChildrenOnStart: 0
   actionDelay: 1
   OnStart:
@@ -2480,7 +2480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endDelay: 0
   autoNext: 1
-  nextDelay: 15
+  nextDelay: 20
   hideChildrenOnStart: 1
   actionDelay: 1
   OnStart:
@@ -6350,6 +6350,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 70249150939137401, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: presetVoiceID
+      value: REBECCA
+      objectReference: {fileID: 0}
     - target: {fileID: 3584447571607792896, guid: a5eef99b8150d574c8fcf2425c678de3,
         type: 3}
       propertyPath: m_RootOrder

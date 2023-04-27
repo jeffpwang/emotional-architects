@@ -9,7 +9,7 @@ public class SetVoiceController : MonoBehaviour
     public void SetVoiceControllerTo()
     {
         
-        voiceController.SetVoiceControllerState(VoiceController.VoiceControllerState.Keywords);
+        voiceController.SetVoiceControllerState(VoiceController.VoiceControllerState.TextToSpeech);
         voiceController.SetActivation(true);
     }
 }
