@@ -4133,8 +4133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sequencePlayers:
-  - {fileID: 1717118013}
   - {fileID: 827945892}
+  - {fileID: 1717118013}
   - {fileID: 756245108}
   - {fileID: 483649004}
   - {fileID: 829000917}
