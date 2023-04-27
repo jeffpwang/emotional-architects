@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Meta.PP
 {
@@ -15,7 +16,12 @@ namespace Meta.PP
 
         private float _startingScaleX;
 
-        private void Awake()
+        private void Start()
+        {
+            StartTherapy();
+        }
+
+        public void StartTherapy()
         {
             StartCoroutine(AnimationSequence());
             StartCoroutine(TimeBarSequence());
@@ -23,6 +29,7 @@ namespace Meta.PP
 
         private IEnumerator AnimationSequence()
         {
+            yield return new WaitForSeconds(1);
             EnableMergeCube(true);
             yield return new WaitForSeconds(GetAnimationLenght(_merge) - 0.05f);
 
@@ -44,12 +51,12 @@ namespace Meta.PP
 
         private IEnumerator TimeBarSequence()
         {
+            yield return new WaitForSeconds(1);
             _timerBar.gameObject.SetActive(true);
             _startingScaleX = _timerBar.localScale.x;
             float timer = 0;
 
-            float lenght = GetAnimationLenght(_merge) + GetAnimationLenght(_start)
-               + GetAnimationLenght(_therapy) * _therapyLoop + GetAnimationLenght(_split) - 0.2f;
+            float lenght = 17.5f;
 
             while (timer < lenght)
             {
