@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1632536023
 Transform:
   m_ObjectHideFlags: 0
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632536019}
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 14.959557, y: -9.993547, z: 0.19512652}
-  m_LocalScale: {x: 20, y: 10, z: 0.19999997}
+  m_LocalPosition: {x: -0, y: -2.5, z: -0}
+  m_LocalScale: {x: 3.5, y: 1, z: 0.06}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4219175189861792080}
@@ -417,7 +417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4219175189538797396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -698,6 +698,7 @@ MonoBehaviour:
   _split: {fileID: 4219175191188135572}
   _gazeController: {fileID: 4219175190008901952}
   _therapyLoop: 10
+  _timerBar: {fileID: 1632536023}
 --- !u!1 &4219175190008901954
 GameObject:
   m_ObjectHideFlags: 0

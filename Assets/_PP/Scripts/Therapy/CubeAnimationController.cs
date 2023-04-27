@@ -44,6 +44,7 @@ namespace Meta.PP
 
         private IEnumerator TimeBarSequence()
         {
+            _timerBar.gameObject.SetActive(true);
             _startingScaleX = _timerBar.localScale.x;
             float timer = 0;
 
@@ -58,6 +59,7 @@ namespace Meta.PP
                 _timerBar.localScale = new Vector3(newScale, _timerBar.localScale.y, _timerBar.localScale.z);
                 yield return new WaitForSeconds(increment);
             }
+            _timerBar.gameObject.SetActive(false);
         }
 
         private void EnableCube(Animator target, bool enable)
