@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44202837, g: 0.4502243, b: 0.4737963, a: 1}
+  m_IndirectSpecularColor: {r: 0.44202673, g: 0.4502241, b: 0.47379225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6426,6 +6426,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VoiceController
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571806364220, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: intent
+      value: keyword
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571806364220, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: confidenceThreshold
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571806364220, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: valueMatchers.Array.data[0].path
+      value: entities.keyword:keyword[0].value
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571806364220, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: onMultiValueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1011015475}
+    - target: {fileID: 3584447571806364220, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: onMultiValueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584447571806364220, guid: a5eef99b8150d574c8fcf2425c678de3,
+        type: 3}
+      propertyPath: onMultiValueEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5eef99b8150d574c8fcf2425c678de3, type: 3}

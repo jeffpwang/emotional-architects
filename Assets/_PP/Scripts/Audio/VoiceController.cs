@@ -24,11 +24,25 @@ public class VoiceController : MonoBehaviour
     private void OnEnable()
     {
         appVoiceExperience.VoiceEvents.OnResponse.AddListener(OnRequestResponse);
+        appVoiceExperience.VoiceEvents.OnStartListening.AddListener(OnStartListening);
+        appVoiceExperience.VoiceEvents.OnStoppedListening.AddListener(OnStoppedListening);
     }
 
     private void OnDisable()
     {
         appVoiceExperience.VoiceEvents.OnResponse.RemoveListener(OnRequestResponse);
+        appVoiceExperience.VoiceEvents.OnStartListening.RemoveListener(OnStartListening);
+        appVoiceExperience.VoiceEvents.OnStoppedListening.RemoveListener(OnStoppedListening);
+    }
+
+    private void OnStoppedListening()
+    {
+        Debug.Log(nameof(OnStoppedListening));
+    }
+
+    private void OnStartListening()
+    {
+        Debug.Log(nameof(OnStartListening));
     }
 
     private void Update()
